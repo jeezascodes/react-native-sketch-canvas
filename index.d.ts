@@ -65,6 +65,7 @@ export interface SketchCanvasProps {
   strokeColor?: string
   strokeWidth?: number
   user?: string
+  testID: string
 
   text?: CanvasText[]
   localSourceImage?: LocalSourceImage
@@ -92,6 +93,7 @@ export class SketchCanvas extends React.Component<SketchCanvasProps & ViewProper
   undo(): number
   addPath(data: Path): void
   deletePath(id: number): void
+  testID: string
 
   /**
    * @param imageType "png" or "jpg"
@@ -127,6 +129,7 @@ export interface RNSketchCanvasProps {
   onClearPressed?: () => void
   onPathsChange?: (pathsCount: number) => void
   user?: string
+  testID: string
 
   closeComponent?: JSX.Element,
   eraseComponent?: JSX.Element,
@@ -171,6 +174,7 @@ export default class RNSketchCanvas extends React.Component<RNSketchCanvasProps 
   deletePath(id: number): void
   save(): void
   nextStrokeWidth(): void
+  testID: string
 
   static MAIN_BUNDLE: string
   static DOCUMENT: string

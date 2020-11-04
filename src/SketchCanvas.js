@@ -230,6 +230,7 @@ class SketchCanvas extends React.Component {
         ref={ref => {
           this._handle = ReactNative.findNodeHandle(ref)
         }}
+        testID={this.props.testID}
         style={this.props.style}
         onLayout={e => {
           this._size = { width: e.nativeEvent.layout.width, height: e.nativeEvent.layout.height }
